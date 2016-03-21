@@ -1,0 +1,124 @@
+<html>
+<head>
+    <!-- START SIGMA IMPORTS -->
+    <!-- END SIGMA IMPORTS -->
+    <!-- Latest compiled and minified CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style>
+        body {
+            padding-top: 50px;
+        }
+
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+
+        #graph-container {
+            top: 150px;
+            bottom: 50px;
+            left: 0;
+            right: 0;
+            position: absolute;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+    <script src="js/sigma.min.js"></script>
+    <script src="js/sigma.plugins.animate.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Neuronal Networks Projects</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="http://www.chenguanghe.com/">Back to ChenguangHe.com</a></li>
+                <li class="active"><a href="#">Kohonen Neuronal Networks</a></li>
+                <li><a href="#about">More</a></li>
+                <li><a href="#contact">More</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" style="top: 10px;">
+            <div class="col-md-12">
+                <h4 style="text-align: center">Using <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.646.5322&rep=rep1&type=pdf">Kohonen Neuronal Networks</a> solves <a href="https://en.wikipedia.org/wiki/Travelling_salesman_problem">Travelling salesman problem</a></h4>
+                <hr>
+            </div>
+            <div class="col-md-2">
+                <label for="city">Number of City</label>
+                <input type="text" value="5" class="form-control" id="city" placeholder="No.of City">
+            </div>
+            <div class="col-md-2">
+                <label for="theta">Theta(learning factor)</label>
+                <input type="text" value="0.5" class="form-control" id="theta" placeholder="Theta">
+            </div>
+            <div class="col-md-2">
+                <label for="phi">Phi(decay factor)</label>
+                <input type="text" value="0.5" class="form-control" id="phi" placeholder="Phi">
+            </div>
+            <div class="col-md-2">
+                <label for="momentum">Momentum(step factor)</label>
+                <input type="text" value="0.995" class="form-control" id="momentum" placeholder="momentum">
+            </div>
+            <div class="col-md-2">
+                <label for="rate">Refresh Rate (in ms)</label>
+                <input type="text" value="100" class="form-control" id="rate" placeholder="Refresh Rate">
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" role="group">
+                    <button id="start" class="btn btn-primary btn-md">Start</button>
+                    <button id="step" style="width:62px;" class="btn btn-success btn-md">Step</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button id="stop" class="btn btn-danger btn-md">Stop</button>
+                    <button id="reset" class="btn btn-warning btn-md">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" style="top: 10px;">
+            <div class="col-md-2">
+                <span style="color: #FF0000">City is red node</span>
+            </div>
+            <div class="col-md-2">
+                <span style="color: #0080ff">Neuron is blue node</span>
+            </div>
+            <div class="col-md-8">
+                <span style="color: #800080">Purple node is a pair of selected city with nearest Neuron</span>
+            </div>
+        </div>
+        </div>
+    <div id="graph-container"></div>
+</div>
+<!-- /.container -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script src="js/tsp.js"></script>
+<script>
+</script>
+</body>
+</html>
